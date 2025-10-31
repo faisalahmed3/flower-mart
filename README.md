@@ -18,6 +18,7 @@ POST	/cart/:id	Add an item to the cart by item ID
 DELETE	/cart/:id	Remove an item from the cart by cart ID
 💻 Run Locally
 git clone -b Sayeed https://github.com/faisalahmed3/flower-mart.git
+
 cd flower-mart/server
 npm install
 
