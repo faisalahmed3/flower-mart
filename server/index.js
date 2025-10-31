@@ -7,14 +7,14 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Schemas & Models
+// SCHEMAS & MODELS
 
 // Item Schema
 const itemSchema = new mongoose.Schema({
   name: { type: String, required: true },
   price: { type: Number, required: true },
   description: { type: String },
-  imageURL: { type: String }, // optional, store image URL
+  imageURL: { type: String },
 });
 const Item = mongoose.model("Item", itemSchema);
 
@@ -27,7 +27,12 @@ const cartSchema = new mongoose.Schema({
 });
 const Cart = mongoose.model("Cart", cartSchema, "cart");
 
-// API Routes
+// API ROUTES
+
+// Root route for testing
+app.get("/", (req, res) => {
+  res.send("Server is running successfully!");
+});
 
 // Get all items
 app.get("/items", async (req, res) => {
@@ -39,7 +44,7 @@ app.get("/items", async (req, res) => {
   }
 });
 
-// Add item to cart
+// Add item to cart by ID
 app.post("/cart/:id", async (req, res) => {
   try {
     const item = await Item.findById(req.params.id);
@@ -72,7 +77,7 @@ app.get("/cart", async (req, res) => {
   }
 });
 
-// Delete item from cart
+// Delete an item from cart by ID
 app.delete("/cart/:id", async (req, res) => {
   try {
     const deleted = await Cart.findByIdAndDelete(req.params.id);
@@ -84,13 +89,15 @@ app.delete("/cart/:id", async (req, res) => {
   }
 });
 
-//  Start Server
+// DATABASE CONNECTION
+
 const PORT = process.env.PORT || 5000;
 
+// Connect to MongoDB and start server
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB Connected Successfully!");
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
   })
-  .catch((err) => console.error(" MongoDB connection failed:", err.message));
+  .catch((err) => console.error("MongoDB connection failed:", err.message));
