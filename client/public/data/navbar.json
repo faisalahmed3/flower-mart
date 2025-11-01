@@ -1,0 +1,14 @@
+{
+  "logo": "/assets/logo.png",
+  "cartIcon": "/assets/cart.png",
+  "navLinks": [
+    { "name": "Home", "path": "/" },
+    { "name": "Shop", "path": "/shop" },
+    { "name": "About us", "path": "/about" }
+  ],
+  "cartTotal": 56,
+  "cartItems": [
+    { "name": "Red Rose Bouquet", "qty": 1, "price": 28 },
+    { "name": "Sunflower Mix", "qty": 1, "price": 28 }
+  ]
+}
