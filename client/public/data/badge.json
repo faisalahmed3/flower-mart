@@ -1,0 +1,10 @@
+{
+  "badges": [
+    {
+      "id": 1,
+      "title": "Trusted Quality",
+      "subtitle": "Fresh flowers guaranteed",
+      "icon": "/assets/trusted-badge.png"
+    }
+  ]
+}
