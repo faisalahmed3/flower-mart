@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global resets and small helpers */
+:root {
+  --brand: #F15A24;
+  --muted-bg: #f6f7fb;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-[var(--muted-bg)] text-gray-800 font-body leading-relaxed;
+}
+
+/* Utility to visually match Figma spacing for section containers */
+.section-container {
+  @apply max-w-6xl mx-auto px-6 lg:px-8;
+}
+
+/* Hero typography */
+.hero-title {
+  font-family: 'Georgia', serif;
+  font-weight: 800;
+}
+
+.small-muted {
+  color: #6b7280;
+}

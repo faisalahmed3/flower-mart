@@ -1,0 +1,22 @@
+{
+  "grids": [
+    {
+      "id": 1,
+      "title": "60% Off | Bloom Plant",
+      "image": "/assets/grid-1.png",
+      "buttonText": "Shop Now"
+    },
+    {
+      "id": 2,
+      "title": "30% Off | Ana Plant",
+      "image": "/assets/grid-2.png",
+      "buttonText": "Shop Now"
+    },
+    {
+      "id": 3,
+      "title": "25% Off | Zabo Plant",
+      "image": "/assets/grid-3.png",
+      "buttonText": "Shop Now"
+    }
+  ]
+}
