@@ -21,9 +21,7 @@ export default function ProductGrid() {
       });
   }, []);
 
-  const handleViewMore = () => {
-    setVisibleCount((prev) => prev + 2); // reveal 2 more
-  };
+  const handleViewMore = () => setVisibleCount((prev) => prev + 2);
 
   if (error)
     return (
@@ -50,13 +48,13 @@ export default function ProductGrid() {
           fresh.
         </p>
 
-        {/* ✅ Responsive Grid (2 on mobile, 3 on md, 4 on lg) */}
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {/* ✅ Equal-height grid: 2 (mobile) / 3 (md) / 4 (lg) */}
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-fr">
           {products.length > 0 ? (
             products.map((item, idx) => (
               <div
                 key={item._id}
-                className={idx < visibleCount ? "w-full" : "hidden md:block"}
+                className={idx < visibleCount ? "h-full" : "hidden md:block h-full"}
               >
                 <ProductCard item={item} />
               </div>
@@ -68,7 +66,7 @@ export default function ProductGrid() {
           )}
         </div>
 
-        {/* ✅ “View More” Button (mobile only) */}
+        {/* “View More” (mobile only) */}
         {products.length > visibleCount && (
           <div className="mt-8 flex justify-center md:hidden">
             <button

@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Button from "./Ui/Button";
 
 const getImageUrl = (item) => {
-  // prefer imageURL from your API, but be flexible
   let url =
     item?.imageURL ||
     item?.imageUrl ||
@@ -11,7 +10,6 @@ const getImageUrl = (item) => {
     item?.image_link ||
     "";
 
-  // auto-fix the bad host from your dataset
   if (url.includes("i.ibb.co.com")) {
     url = url.replace("i.ibb.co.com", "i.ibb.co");
   }
@@ -33,7 +31,6 @@ export default function ProductCard({ item }) {
   const fallback = `https://source.unsplash.com/600x600/?flowers,${encodeURIComponent(
     displayName
   )}`;
-
   const imgSrc = imgErr ? fallback : getImageUrl(item) || fallback;
 
   const handleAddToCart = async () => {
@@ -63,7 +60,8 @@ export default function ProductCard({ item }) {
   };
 
   return (
-    <div className=" overflow-hidden shadow-sm flex flex-col items-center p-4">
+    <div className="overflow-hidden shadow-sm flex flex-col p-4 h-full bg-white rounded-md">
+      {/* image */}
       <img
         src={imgSrc}
         alt={displayName}
@@ -72,15 +70,20 @@ export default function ProductCard({ item }) {
         loading="lazy"
       />
 
-      <div className="mt-4 text-center">
+      {/* content */}
+      <div className="mt-4 text-center flex-1 flex flex-col">
         <h3 className="font-semibold text-gray-900">{displayName}</h3>
         <p className="text-sm text-gray-600 mt-1">${priceNum}</p>
-        <p className="text-xs text-gray-400 mt-1">{item.description}</p>
+        {item.description && (
+          <p className="text-xs text-gray-400 mt-2 mb-4 leading-relaxed">
+            {item.description}
+          </p>
+        )}
 
         <Button
           onClick={handleAddToCart}
           disabled={adding}
-          className="mt-4 w-full bg-brand hover:bg-pink transition-transform transform hover:scale-105 rounded-none disabled:opacity-60"
+          className="mt-auto w-full bg-brand hover:bg-pink transition-transform transform hover:scale-105 rounded-none disabled:opacity-60"
         >
           {adding ? "ADDING..." : "ADD TO CART"}
         </Button>
