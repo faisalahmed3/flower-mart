@@ -48,7 +48,7 @@ export default function ProductGrid() {
           fresh.
         </p>
 
-        {/* ✅ Equal-height grid: 2 (mobile) / 3 (md) / 4 (lg) */}
+        {/*  Equal-height grid: 2 (mobile) / 3 (md) / 4 (lg) */}
         <div className="mt-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-fr">
           {products.length > 0 ? (
             products.map((item, idx) => (
