@@ -60,7 +60,7 @@ export default function ProductCard({ item }) {
   };
 
   return (
-    <div className="overflow-hidden shadow-sm flex flex-col p-4 h-full bg-white rounded-md">
+    <div className="overflow-hidden shadow-sm flex flex-col p-4 h-full">
       {/* image */}
       <img
         src={imgSrc}
