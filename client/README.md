@@ -1,16 +1,63 @@
-# React + Vite
+# 🌸 Flower Mart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Site:** [https://flower-mart.netlify.app/](https://flower-mart.netlify.app/)
+**GitHub Repo:** [https://github.com/faisalahmed3/flower-mart.git](https://github.com/faisalahmed3/flower-mart.git)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🪷 Overview
 
-## React Compiler
+A fully responsive **React + Tailwind CSS** flower shop web app with live product data and cart functionality powered by a real backend API.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⚙️ Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+git clone https://github.com/faisalahmed3/flower-mart.git
+cd flower-mart
+npm install
+npm run dev
+```
+
+Runs locally at → [http://localhost:5173](http://localhost:5173)
+
+---
+
+## ✨ Features
+
+* 🏡 Dynamic home page with live products
+* 🛒 Add to cart & remove from cart (real API)
+* 🧺 Cart total updates instantly via global event
+* 🌿 Shop page with “View More” on mobile
+* 🪻 About page with minimal clean design
+* 📱 Responsive 2/3/4-column grid
+
+---
+
+## 🧩 Tech Stack
+
+* **React 18 + Vite**
+* **Tailwind CSS**
+* **React Router DOM v6**
+* **Netlify (Deployment)**
+* **Backend API:** `https://flower-mart-backend.onrender.com`
+
+---
+
+## 🛒 API Endpoints
+
+| Method | Endpoint    | Description           |
+| ------ | ----------- | --------------------- |
+| GET    | `/items`    | Fetch all products    |
+| GET    | `/cart`     | Get all cart items    |
+| POST   | `/cart/:id` | Add item to cart      |
+| DELETE | `/cart/:id` | Remove item from cart |
+
+---
+
+## 👨‍💻 Developer
+
+**Md. Shahidul Islam Sakib**
+🔗 [GitHub: Saqib-17](https://github.com/Saqib-17)
+
