@@ -1,7 +1,3 @@
-Perfect 👍 — here’s your **final, short, and clean README.md** (no file structure section, with your correct name and GitHub profile).
-
----
-
 # 🌸 Flower Mart
 
 **Live Site:** [https://flower-mart.netlify.app/](https://flower-mart.netlify.app/)
