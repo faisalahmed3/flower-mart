@@ -9,25 +9,23 @@ Base URL:
 
 ⚙️ API Endpoints
 🌿 Items
-Method	Endpoint	Description
-GET	/items	Fetch all available items
+Method Endpoint Description
+GET /items Fetch all available items
 🛒 Cart
-Method	Endpoint	Description
-GET	/cart	Get all items in the cart
-POST	/cart/:id	Add an item to the cart by item ID
-DELETE	/cart/:id	Remove an item from the cart by cart ID
+Method Endpoint Description
+GET /cart Get all items in the cart
+POST /cart/:id Add an item to the cart by item ID
+DELETE /cart/:id Remove an item from the cart by cart ID
 💻 Run Locally
 git clone -b Sayeed https://github.com/faisalahmed3/flower-mart.git
 
 cd flower-mart/server
 npm install
 
-
 Create a .env file:
 
 MONGO_URI=your_mongodb_connection_string
 PORT=5000
-
 
 Start the server:
 
